@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="{{url_for('static', filename='eliza.js')}}"></script>
+	</head>
+	<body>
+		<div id="head"> <h1>Hello, {{name}}. It is {{date}}!</h1> </div>
+		<form action="/eliza/DOCTOR" method="post" id="inputForm">
+			<input type="text" name="input" id="input"><br>
+			<input type="submit" value="Submit">
+		<div id="dialogue"></div>
+		</form>
+	</body>
+</html>
