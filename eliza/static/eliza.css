@@ -1,3 +1,29 @@
-h1 {
-	color: red;
+body {
+        background-color: #bcccd1;
 }
+
+h1 {
+        font-size: 40px;
+        color: black;
+        text-align: center;
+}
+
+input[type=text] {
+        text-align: center;
+        color: black;
+        width: 25%;
+        padding: 12px 20px;
+        margin: auto 0;
+}
+
+input[type=submit] {
+        text-align: center;
+        width: 10%;
+        padding: 14px 20px;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        margin: auto 0;
+}
+
+
