@@ -3,6 +3,7 @@ import os
 import sys
 import time
 import random
+import json
 
 responses = [
 	'How does that make you feel?',
@@ -27,8 +28,7 @@ responses = [
 	'What are you expecting from this session?',
 	'Interesting.',
 	'Mmmhm, go on.',
-	'I can\'t tell you that.',
-	''
+	'I can\'t tell you that.'
 ]
 
 app = Flask(__name__)
@@ -47,6 +47,11 @@ def eliza():
 
 @app.route('/eliza/DOCTOR/', methods=['GET', 'POST'], strict_slashes=False)
 def doctor():
+	#if request.method =="POST":
+	#	input = request.data
+	#	
+	#	return jsonify( eliza = len(input))
+	#else:
 	return jsonify(	eliza = random.choice(responses))
 if __name__=="__main__":
 	app.run(debug = True)
