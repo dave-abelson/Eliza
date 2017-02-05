@@ -5,9 +5,30 @@ import time
 import random
 
 responses = [
-	'I am fucking ELIZA',
-	'Hello, buddy'
-
+	'How does that make you feel?',
+	'Interesting, tell me more.',
+	'Do you blame your mother for that?',
+	'Do you blame your father for that?',
+	'Perhaps you are experiencing insomnia.',
+	'Dehydration may lead to that',
+	'Exercise and a healthy diet will fix that.',
+	'You may be projecting.',
+	'My book has a chapter that covers that.',
+	'Can you elaborate?',
+	'Why do you say that?',
+	'Please, continue.',
+	'It sounds like an anger issue.',
+	'How was yesterday?',
+	'Do you really feel that way?',
+	'Did you have a good relationship with your parents?',
+	'So what brought you here today?',
+	'What would make the problem better?',
+	'In general, how would you say your mood has been?',
+	'What are you expecting from this session?',
+	'Interesting.',
+	'Mmmhm, go on.',
+	'I can\'t tell you that.',
+	''
 ]
 
 app = Flask(__name__)
@@ -26,12 +47,6 @@ def eliza():
 
 @app.route('/eliza/DOCTOR/', methods=['GET', 'POST'], strict_slashes=False)
 def doctor():
-#	content = request.get_json(silent=True)
-#	print content
-#	return render_template('DOCTOR.html')
-	return jsonify(
-		eliza = random.choice(responses)
-	)
+	return jsonify(	eliza = random.choice(responses))
 if __name__=="__main__":
-	#app.run(host='0.0.0.0', port=80)
 	app.run(debug = True)

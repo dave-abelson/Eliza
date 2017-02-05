@@ -1,29 +1,33 @@
-body {
-        background-color: #bcccd1;
+
+html body {
+        background-color: #DFE2DB;
 }
 
 h1 {
-        font-size: 40px;
-        color: black;
+	margin: auto;
+	padding-top: 50px;
+	text-align: center;
+}
+
+h3 {
+        margin: auto;
+        padding-top: 50px;
         text-align: center;
 }
 
-input[type=text] {
-        text-align: center;
-        color: black;
-        width: 25%;
-        padding: 12px 20px;
-        margin: auto 0;
+#dialogue {
+	display: inline-block;
+	text-align: left;
 }
 
-input[type=submit] {
-        text-align: center;
-        width: 10%;
-        padding: 14px 20px;
-        cursor: pointer;
-        background-color: white;
-        color: black;
-        margin: auto 0;
+.human {
+	font-size: 28px;
+	background-color: white;
+	font-family: 'Caveat Brush', cursive;
 }
 
-
+.eliza {
+	font-size: 27px;
+	background-color: white;
+	font-family: 'Play', sans-serif;
+}

@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
 	<title>Eliza</title>
-	<meta charset="utf-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='eliza.css')}}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 	<body>
-		<div class="head"><h1>Hello, I am Eliza.</h1></div>
-		<div class="head"><h1>What is your name?</h1></div>
+		<div><h1>Hello, I am Eliza.</h1></div>
+		<div><h1>What is your name?</h1></div>
 		<br>
 		<center>
 		<form method="post">
-		<input type="text" name="name" value=""><br />
+		<input type="text" name="name" value="">
 		<input type="submit" value="Submit">
 		</form>
 		</center>

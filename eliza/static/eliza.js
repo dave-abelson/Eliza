@@ -10,7 +10,7 @@ $(document).ready(function() {
 			dataType: "json",
 			url: "/eliza/DOCTOR"
 		}).done(function(data) {
-			$("#dialogue").append("<div class='user'> Human: " + input + "</div>");
+			$("#dialogue").append("<div class='human'> Human: " + input + "</div>");
 			$("#dialogue").append("<div class='eliza'>Eliza: " + data.eliza + "</div>")
 			var dialogueItem = document.getElementById("dialogue");
 			dialogueItem.scrollTop = dialogueItem.scrollHeight;
@@ -21,11 +21,3 @@ $(document).ready(function() {
 	});	
 });
 
-/*
-function handler() {
-	msg = document.getElementById('input').value;
-	dial_elem = document.getElementById('dialogue');
-	dial_elem.innerHTML += msg + "<br>";
-	return false;
-}
-*/
