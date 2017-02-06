@@ -52,6 +52,10 @@ def doctor():
 	#	
 	#	return jsonify( eliza = len(input))
 	#else:
-	return jsonify(	eliza = random.choice(responses))
+	data = request.data
+	if len(data) < 8:
+		return jsonify( eliza = "Talk to me.")	
+	else:
+		return jsonify(	eliza = random.choice(responses))
 if __name__=="__main__":
 	app.run(debug = True)

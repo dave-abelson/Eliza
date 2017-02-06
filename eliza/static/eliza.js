@@ -12,8 +12,6 @@ $(document).ready(function() {
 		}).done(function(data) {
 			$("#dialogue").append("<div class='human'> Human: " + input + "</div>");
 			$("#dialogue").append("<div class='eliza'>Eliza: " + data.eliza + "</div>")
-			var dialogueItem = document.getElementById("dialogue");
-			dialogueItem.scrollTop = dialogueItem.scrollHeight;
 		}).fail(function() {
 			dial_elem = document.getElementById('dialogue');
                         dial_elem.innerHTML += "FAIL" + "<br>";
